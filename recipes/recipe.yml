@@ -19,9 +19,14 @@ modules:
 
   - type: rpm-ostree
     repos:
-      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
       - alacritty
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
       - edk2-ovmf
       - fzf
       - helix
@@ -54,19 +59,19 @@ modules:
       install:
         - org.mozilla.firefox
       remove:
-        - app/org.gnome.Calculator/x86_64/stable
-        - app/org.gnome.Calendar/x86_64/stable
-        - app/org.gnome.Characters/x86_64/stable
-        - app/org.gnome.Contacts/x86_64/stable
-        - app/org.gnome.Papers/x86_64/stable
-        - app/org.gnome.Logs/x86_64/stable
-        - app/org.gnome.Loupe/x86_64/stable
-        - app/org.gnome.NautilusPreviewer/x86_64/stable
-        - app/org.gnome.TextEditor/x86_64/stable
-        - app/org.gnome.Weather/x86_64/stable
-        - app/org.gnome.baobab/x86_64/stable
-        - app/org.gnome.clocks/x86_64/stable
-        - app/org.gnome.font-viewer/x86_64/stable
+        - org.gnome.Calculator/x86_64/stable
+        - org.gnome.Calendar/x86_64/stable
+        - org.gnome.Characters/x86_64/stable
+        - org.gnome.Contacts/x86_64/stable
+        - org.gnome.Papers/x86_64/stable
+        - org.gnome.Logs/x86_64/stable
+        - org.gnome.Loupe/x86_64/stable
+        - org.gnome.NautilusPreviewer/x86_64/stable
+        - org.gnome.TextEditor/x86_64/stable
+        - org.gnome.Weather/x86_64/stable
+        - org.gnome.baobab/x86_64/stable
+        - org.gnome.clocks/x86_64/stable
+        - org.gnome.font-viewer/x86_64/stable
         - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
 
