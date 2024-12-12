@@ -35,13 +35,11 @@ modules:
       - kanshi
       - libvirt
       - mako
+      - miracle-wm
       - nerd-fonts
       - qemu
-      - rofi-wayland
       - samba
-      - sddm
       - swaybg
-      - swaylock
       - thunar
       - virt-manager
       - waybar
