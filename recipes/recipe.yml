@@ -21,7 +21,8 @@ modules:
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
-      - @lxqt
+      - fedora-release-lxqt
+      - fedora-release-identity-lxqt
       - alacritty
       - docker-ce
       - docker-ce-cli
