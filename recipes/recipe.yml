@@ -59,19 +59,19 @@ modules:
       install:
         - org.mozilla.firefox
       remove:
-        - org.gnome.Calculator/x86_64/stable
-        - org.gnome.Calendar/x86_64/stable
-        - org.gnome.Characters/x86_64/stable
-        - org.gnome.Contacts/x86_64/stable
-        - org.gnome.Papers/x86_64/stable
-        - org.gnome.Logs/x86_64/stable
-        - org.gnome.Loupe/x86_64/stable
-        - org.gnome.NautilusPreviewer/x86_64/stable
-        - org.gnome.TextEditor/x86_64/stable
-        - org.gnome.Weather/x86_64/stable
-        - org.gnome.baobab/x86_64/stable
-        - org.gnome.clocks/x86_64/stable
-        - org.gnome.font-viewer/x86_64/stable
+        - org.gnome.Calculator
+        - org.gnome.Calendar
+        - org.gnome.Characters
+        - org.gnome.Contacts
+        - org.gnome.Papers
+        - org.gnome.Logs
+        - org.gnome.Loupe
+        - org.gnome.NautilusPreviewer
+        - org.gnome.TextEditor
+        - org.gnome.Weather
+        - org.gnome.baobab
+        - org.gnome.clocks
+        - org.gnome.font-viewer
         - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
 
