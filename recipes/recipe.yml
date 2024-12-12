@@ -1,12 +1,12 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: bluedrewski
+name: snowtje
 # description will be included in the image's metadata
-description: Drewskis happy images
+description: Snow Snow is the bestest cat. Meow meow
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/bazzite-gnome-nvidia
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -20,80 +20,23 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/secureblue/hardened-chromium/repo/fedora-%OS_VERSION%/secureblue-hardened-chromium-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/secureblue/bubblejail/repo/fedora-%OS_VERSION%/secureblue-bubblejail-fedora-%OS_VERSION%.repo
-      - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
-      - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
     install:
-      - micro
       - starship
-      - emacs
-      - hardened-chromium
-      - hardened-chromium-subresource-filter
-      - distrobox
-      - bubblejail
-      - usbguard
-      - usbguard-notifier
-      - setroubleshoot
-      - setools
-      - fscrypt
-      - vim
-      - pam-u2f
-      - pam_yubico
-      - pamu2fcfg
-      - yubikey-manager
-      - google-noto-fonts-all
-      - headsetcontrol
-      - gnome-text-editor
-      - virt-manager
-      - libvirt
-      - evince
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
-      - firefox
-      - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-      - virtualbox-guest-additions
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
       install:
         - org.mozilla.firefox
-        - org.gnome.Loupe
-        - org.signal.Signal
-        - com.discordapp.Discord
-        - im.riot.Riot
-        - org.telegram.desktop
-        - org.libreoffice.LibreOffice
-        - com.github.tchx84.Flatseal
-        - com.mattjakeman.ExtensionManager
-        - com.usebottles.bottles
-        - net.lutris.Lutris
-        - com.github.tchx84.Flatseal
-        - net.lutris.Lutris
-        - com.usebottles.bottles
-        - io.github.dvlv.boxbuddyrs
-        - org.gnome.Evolution
-        - org.telegram.desktop
-        - org.videolan.VLC
-        - io.mpv.Mpv
-        - org.atheme.audacious
-        - com.github.tchx84.Flatseal
-        - org.gnome.Builder
-        - com.visualstudio.code
-        - org.xiphos.Xiphos
-        - org.mozilla.Thunderbird
-        - org.kde.amarok
-        - net.mullvad.MullvadBrowser
-        - org.kde.okular
       remove:
         - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
 
   - type: script
     scripts:
-      - enableautoupdate.sh
-      - enableflatpackupdate.sh
-      
+      #- example.sh
+            
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
