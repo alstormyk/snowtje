@@ -29,6 +29,7 @@ modules:
       - docker-compose-plugin
       - edk2-ovmf
       - fzf
+      - gparted
       - helix
       - jetbrains-mono-fonts
       - kanshi
