@@ -21,23 +21,6 @@ modules:
     repos:
       - https://download.docker.com/linux/fedora/docker-ce.repo
     install:
-      - fedora-release-lxqt
-      - lxqt-qtplugin
-      - lxqt-wallet
-      - libdbusmenu-lxqt
-      - liblxqt
-      - lxqt-about
-      - lxqt-admin
-      - lxqt-config
-      - lxqt-globalkeys
-      - lxqt-menu-data
-      - lxqt-notificationd
-      - lxqt-openssh-askpass
-      - lxqt-panel
-      - lxqt-policykit
-      - lxqt-runner
-      - lxqt-session
-      - lxqt-themes-fedora
       - alacritty
       - edk2-ovmf
       - fzf
@@ -47,7 +30,6 @@ modules:
       - kanshi
       - libvirt
       - mako
-      - miracle-wm
       - nerd-fonts
       - qemu
       - samba
